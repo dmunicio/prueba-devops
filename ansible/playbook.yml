@@ -1,0 +1,10 @@
+--- 
+
+- hosts: all
+  become: yes
+  tasks:
+    - name: Download file
+      get_url:
+        url: https://devops-chicago-ta1-artifactory.s3.eu-west-1.amazonaws.com/cuenta-0.1
+        dest: /home/ubuntu/cuenta
+        mode: '0755'        
