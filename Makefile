@@ -32,6 +32,7 @@ upload:
 .PHONY: deploy
 deploy: 
 	# cp -fp /opt/versions/cuenta-$(VERSION) ./cuenta
+	id -a
 	scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p -i /home/diego-municio/diego/chicago/ta3/devops-chicago.pem ./cuenta ubuntu@3.250.120.231:/home/ubuntu/
 
 ####  
